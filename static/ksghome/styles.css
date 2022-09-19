@@ -1,0 +1,42 @@
+
+
+.container-fluid{
+    padding: 2% 10%;
+}
+.navbar{
+    padding: 1rem 0 0rem;
+}
+.ksglog{
+    text-align: center;
+}
+.ksglogimg{
+    height: 340px;
+}
+.footer{
+    text-align: center;
+    margin-top: 20px;
+}
+.cart-img{
+    margin: 0;
+    width: 343px;
+    height: 150px;
+}
+
+.post-detail{
+    line-height: 2;
+}
+
+.title{
+    padding-top: 4rem;
+}
+
+.detail-img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    float: left;
+    margin: 40px 20px 20px 0;
+}
+.description{
+    clear: left;
+}

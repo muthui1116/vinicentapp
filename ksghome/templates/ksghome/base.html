@@ -1,0 +1,43 @@
+{% load static%}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Vundi</title>
+
+    <!-- fonts awesome  -->
+    <script src="https://kit.fontawesome.com/bf4cb2bb37.js" crossorigin="anonymous"></script>
+
+    <!-- google fonts  -->
+    <link href="https://fonts.googleapis.com/css2?family=Atomic+Age&family=Merriweather:wght@300&family=Montserrat&family=Roboto:wght@100&family=Sacramento&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+
+    <!-- favicon link  -->
+    <link rel="icon" href="{% static 'ksghome/images/ksg.ico'%}">
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- main css -->
+    <link rel="stylesheet" href="{% static 'ksghome/styles.css'%}">
+
+  </head>
+
+  
+  <body>
+    <div class="container-fluid">
+        {% include 'ksghome/includes/navbar.html'%}
+        <div class="ksglog">
+          <img class="ksglogimg" src="{% static 'ksghome/images/ksglog.jpg'%}" class="img-fluid rounded">
+        </div>
+        {% block content%}
+    
+        {% endblock%}
+    
+        {% include 'ksghome/includes/footer.html'%}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js" integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK" crossorigin="anonymous"></script>
+    <script src="{% static 'ksghome/scripts.js'%}"></script>
+  </body>
+</html>

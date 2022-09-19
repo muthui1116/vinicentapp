@@ -1,0 +1,48 @@
+{% extends 'ksghome/base.html'%}
+
+{% block content%}
+<!-- ========================= SECTION CONTENT ========================= -->
+<section class="section-conten padding-y bg">
+
+    <div class="container">
+        <div class="row">
+        <aside class="col-md-3">
+            <!--   SIDEBAR   -->
+            <ul class="list-group">
+                <a class="list-group-item {% if '/accounts/' == request.path%}active {% endif%}" href="{% url 'dashboard'%}"> Dashboard </a>
+                <a class="list-group-item {% if '/posts/' in request.path%}active {% endif%}" href="{% url 'posts'%}"> Posts </a>
+                <a class="list-group-item {% if '/edit_profile/' in request.path%}active {% endif%}" href="{% url 'edit_profile'%}"> Edit Profile </a>
+            </ul>
+            <br>
+          
+            <a class="btn btn-light btn-block" href="{% url 'logout'%}"> <i class="fa fa-power-off"></i> <span class="text">Log out</span> </a> 
+            <!--   SIDEBAR .//END   -->
+        </aside>
+        <main class="col-md-9">
+            <article class="card">
+                <header class="card-header">
+                    <strong class="d-inline-block mr-3">Logged in as:</strong>
+                    <span> {{ user.full_name}}</span>
+                </header>
+                <div class="card-body">
+                    <div class="row"> 
+
+                    <div class="col">
+                        <div class="card">
+                            <div class="card-body" style="text-align: center;">
+                                <h5 class="card-title">Posts</h5>
+                                <h4>{{ posts_count}}</h4>
+                                <a href="{% url 'posts'%}">View Posts</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- row.// -->
+            </article> <!-- order-group.// --> 
+        </main>
+    </div> <!-- row.// -->
+    </div>
+    
+    
+    </section>
+    <!-- ========================= SECTION CONTENT END// ========================= -->
+{% endblock%}

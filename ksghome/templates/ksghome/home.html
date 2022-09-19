@@ -1,0 +1,26 @@
+{% extends 'ksghome/base.html'%}
+
+{% block content%}
+
+<header class="section-heading">
+	<a href="{% url 'posts'%}" class="btn-outline-primary float-end">See all</a>
+	<h3 class="section-title">Popular in economics</h3>
+</header>
+<div class="row">
+
+  {% for post in posts%}
+  <div class="col-md-4">
+    <div class="card mb-4 border-light">
+      <a href="{{ post.get_url}}" > <img class="cart-img" src="{{ post.images.url}}"> </a>
+      <figcaption class="card-padding">
+        <a href="{{ post.get_url}}" class="title">{{ post.topic}}</a> <br>
+        <a href="{{ post.get_url}}" class="title">{{ post.sub_topic}}</a> <br>
+        <a href="{{ post.get_url}}" class="btn btn-sm">More info...</button></a>
+      </figcaption>
+    </div>
+  </div>
+  {% endfor%}
+
+</div>
+
+{% endblock%}
