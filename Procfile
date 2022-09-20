@@ -1,1 +1,1 @@
-web: gunicorn ksgm.wsgi
+web: gunicorn ksgm.wgsi
