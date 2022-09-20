@@ -1,1 +1,1 @@
-web: gunicorn ksgapp.wgsi
+web: gunicorn ksgm.wgsi
