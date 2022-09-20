@@ -1,1 +1,1 @@
-web: gunicorn ksgm.wgsi
+web: gunicorn ksgblog.wgsi
